@@ -1,0 +1,34 @@
+{
+  "name": "@opaquejs/query",
+  "version": "0.1.0",
+  "description": "The query type defintion of the Opaque ORM",
+  "main": "lib/index.js",
+  "files": [
+    "/lib"
+  ],
+  "devDependencies": {
+    "typescript": "^4.2.2"
+  },
+  "peerDependencies": {
+    "@opaquejs/opaque": "0.17.0"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opaquejs/query.git"
+  },
+  "keywords": [
+    "opaquejs",
+    "orm",
+    "api",
+    "query"
+  ],
+  "author": "Sebastian Dittrich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/opaquejs/query/issues"
+  },
+  "homepage": "https://github.com/opaquejs/query#readme"
+}
