@@ -24,7 +24,7 @@ export type GenericAtomicComparison<Key, Comparator, Value> = {
   value: Value;
 };
 
-export type ComaparisonTypes<Value> = {
+export type ComparisonTypes<Value> = {
   "==": Value;
   "!=": Value;
   "<": Value;
@@ -34,12 +34,12 @@ export type ComaparisonTypes<Value> = {
   in: Value[];
 };
 
-type DistributeAtomicComparison<Key, Comparator extends keyof ComaparisonTypes<Value>, Value> = Comparator extends any
-  ? GenericAtomicComparison<Key, Comparator, ComaparisonTypes<Value>[Comparator]>
+type DistributeAtomicComparison<Key, Comparator extends keyof ComparisonTypes<Value>, Value> = Comparator extends any
+  ? GenericAtomicComparison<Key, Comparator, ComparisonTypes<Value>[Comparator]>
   : never;
 export type AtomicComparison<Key = string, Value = unknown> = DistributeAtomicComparison<
   Key,
-  keyof ComaparisonTypes<any>,
+  keyof ComparisonTypes<any>,
   Value
 >;
 
