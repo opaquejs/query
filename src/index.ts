@@ -43,7 +43,13 @@ export type AtomicComparison<Key = string, Value = unknown> = DistributeAtomicCo
   Value
 >;
 
+export type OrderEntry = {
+  key: string;
+  direction: "asc" | "desc";
+};
+
 export type OpaqueQueryRootEntries = {
   _limit?: number;
   _skip?: number;
+  _orderBy?: OrderEntry[];
 };
