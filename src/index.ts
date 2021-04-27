@@ -9,6 +9,7 @@ export type NormalizedSubQuery<Subject extends Queryable = Record<string, unknow
   | {}
   | OrConnector<Subject>
   | AndConnector<Subject>
+  | NotConnector<Subject>
   | DistributeComparisons<Subject, keyof Subject>;
 
 export type OrConnector<Subject extends Queryable = Record<string, unknown>> = {
@@ -16,6 +17,9 @@ export type OrConnector<Subject extends Queryable = Record<string, unknown>> = {
 };
 export type AndConnector<Subject extends Queryable = Record<string, unknown>> = {
   _and: NormalizedSubQuery<Subject>[];
+};
+export type NotConnector<Subject extends Queryable = Record<string, unknown>> = {
+  _not: NormalizedSubQuery<Subject>;
 };
 
 export type GenericAtomicComparison<Key, Comparator, Value> = {
