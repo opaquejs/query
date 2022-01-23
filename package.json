@@ -9,9 +9,6 @@
     "devDependencies": {
         "typescript": "^4.2.2"
     },
-    "peerDependencies": {
-        "@opaquejs/opaque": "^0.17.0"
-    },
     "scripts": {
         "build": "tsc"
     },
